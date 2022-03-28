@@ -19,19 +19,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         SlangWordList slangWordList;
 	Scanner sc = new Scanner(System.in);
-	if (FileManager.exist(FileManager.DATA_FILE) && FileManager.exist(FileManager.ORIGINAL_FILE)) {
-            slangWordList = FileManager.loadSlangWordList(FileManager.DATA_FILE);
-	} else {
-            do {
-                System.out.print("Enter the path to slang.txt file: ");
-		String path = sc.next();
-                slangWordList = FileManager.importSlangWords(path);
-		if (slangWordList != null) {
-                    FileManager.saveSlangWordList(FileManager.ORIGINAL_FILE, slangWordList);
-                    FileManager.saveSlangWordList(FileManager.DATA_FILE, slangWordList);
-		}
-            } while (slangWordList == null);
-	}
+	
         
         boolean exit = false;
         
