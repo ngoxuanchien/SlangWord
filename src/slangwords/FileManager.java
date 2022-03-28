@@ -18,9 +18,9 @@ import slangwords.SlangWord;
 
 
 public class FileManager {
-    public final static String ORIGINAL_FILE = "original.data";
-    public final static String DATA_FILE = "slangWord.data";
-    public final static String HISTORY_FILE = "history.data";
+    public final static String ORIGINAL_FILE = "original.txt";
+    public final static String DATA_FILE = "slangWord.txt";
+    public final static String HISTORY_FILE = "history.txt";
     
     public static boolean exist(String fileName) {
         return (new File(fileName)).isFile();
