@@ -22,6 +22,27 @@ public class FileManager {
     public final static String DATA_FILE = "slangWord.txt";
     public final static String HISTORY_FILE = "history.txt";
     
+    public final static void clearConsole()
+{
+    try
+    {
+        final String os = System.getProperty("os.name");
+ 
+        if (os.contains("Windows"))
+        {
+            Runtime.getRuntime().exec("cls");
+        }
+        else
+        {
+            Runtime.getRuntime().exec("clear");
+        }
+    }
+    catch (final Exception e)
+    {
+        //  Handle any exceptions.
+    }
+}
+    
     public static boolean exist(String fileName) {
         return (new File(fileName)).isFile();
     }
@@ -135,7 +156,7 @@ public class FileManager {
             }
             in.close();
                 
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException ex) {
             System.out.println("History is empty");
         }
     }

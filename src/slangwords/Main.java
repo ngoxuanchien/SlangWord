@@ -17,7 +17,9 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-        SlangWordList slangWordList;
+        System.out.println("hello");
+        FileManager.clearConsole();
+        /*SlangWordList slangWordList;
 	Scanner sc = new Scanner(System.in);
 	if (FileManager.exist(FileManager.DATA_FILE) && FileManager.exist(FileManager.ORIGINAL_FILE)) {
             slangWordList = FileManager.loadSlangWordList(FileManager.DATA_FILE);
@@ -262,6 +264,6 @@ public class Main {
                 sc.nextLine();
             }
         }
-        sc.close();
+        sc.close();*/
     } 
 }
